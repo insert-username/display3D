@@ -1,8 +1,7 @@
 package display3D;
 
 /**
- * example for how to use 3d stuff. Note: i changed the Canvass3D class to Scene3D, so there's a
- * bunch of references to Canvass3D still here
+ * example 3D display
  * @author Luke
  *
  */
@@ -18,13 +17,13 @@ public final class Demo {
 		//make some axes as well
 		Object3D axes = new Object3DAxes("X", "Y", "Z", 1.0);
 		
-		//now create a canvass to hold these objects
-		Scene3D myCanvass = new Scene3D();
-		myCanvass.addObject3D( path , axes );
+		//now create a scene to hold these objects
+		Scene3D myScene = new Scene3D();
+		myScene.addObject3D( path , axes );
 		
-		//now create a frame to display the canvass, you dont
-		//actually have to use Frame3D, canvass is a JComponent
-		Frame3D f3D = new Frame3D( myCanvass );
+		//now create a frame to display the scene, you dont
+		//actually have to use Frame3D, scene is a JComponent
+		Frame3D f3D = new Frame3D( myScene );
 		
 		//you'll need to repaint manually ( I just found out you shouldn't use multithreading with Swing ) :
 		
